@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9f6ff"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/account" />
+
+    <TextView
+        android:id="@+id/textUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imageProfile"
+        app:layout_constraintTop_toTopOf="@+id/imageProfile"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfile"
+        android:layout_marginLeft="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textPosttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textUsername"
+        app:layout_constraintTop_toTopOf="@+id/imageProfile"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfile"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:id="@+id/buttonFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageProfile"
+        android:onClick="SubmitForm"
+        android:textColor="#FFFFFFFF"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/textUsername"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfile"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/textThumb"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorRed"
+        app:layout_constraintStart_toStartOf="@+id/textBody"
+        app:layout_constraintTop_toBottomOf="@+id/textBody" />
+
+    <TextView
+        android:id="@+id/textComment"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        app:layout_constraintStart_toStartOf="@+id/textThumb"
+        app:layout_constraintTop_toBottomOf="@+id/textThumb" />
+
+    <WebView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone" />
+
+</android.support.constraint.ConstraintLayout>

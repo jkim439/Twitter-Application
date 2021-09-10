@@ -1,0 +1,136 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 90%;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid silver;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 120%;
+  padding: 3px;
+}
+
+input:focus {
+  border-bottom: 1px solid red;
+}
+
+.divCenter {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  /* CSS3 Animations: https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  animation: fadein 3s;
+}
+
+.divBox {
+  width: 30vw;
+  border-radius: 5px;
+  border: 1.2px solid skyblue;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, .5);
+}
+
+.divLeft {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 40vw;
+  height: 100vh;
+  text-align: center;
+  background-image: url("../img/signup.jpg");
+  background-size: cover;
+  background-position: right center;
+  animation: animatedBackground 40s linear infinite;
+}
+
+.divRight {
+  position: fixed;
+  left: 40vw;
+  top: 0px;
+  width: 100vw;
+  height:100vh;
+  background-color: #e9f6ff;
+  border-left: 1px solid #e3e7ea;
+}
+
+.divBottom {
+  text-align: right;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  font-size: 90%;
+}
+
+button {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #3f51b5;
+  width: 80%;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+img {
+  width: 30%;
+  height: 30%;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes animatedBackground {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}
